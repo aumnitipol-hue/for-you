@@ -50,6 +50,9 @@ button{
     background:#444;
     color:white;
     position:absolute;
+    left:50%;
+    top:65%;
+    transform:translate(-50%,-50%);
 }
 
 .ask{
@@ -117,22 +120,19 @@ noBtn.addEventListener("click", function(){
     noBtn.style.top = y + "px";
 });
 
-// ปุ่มที่สาม
-function askYourself(){
-    alert("อยากรู้ก็ถามเองเลย 😜");
-}
-
 // กดเป็น ❤️
 function acceptLove(){
-    sendEmail();
+    emailjs.send("service_zth1smr","template_fotasxl",{
+        message:"ตกลงเป็นแฟนแล้ว 💖"
+    });
     nextPage(3);
     startEmojis();
 }
 
-// ส่งเมล
-function sendEmail(){
+// ปุ่มที่สาม ส่งเข้าเมล
+function askYourself(){
     emailjs.send("service_zth1smr","template_fotasxl",{
-        message:"ตกลงเป็นแฟนแล้ว 💖"
+        message:"เธอกดปุ่ม อยากรู้ก็ถามด้วยตัวเองสิ 🫵🏻😜"
     });
 }
 
