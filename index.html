@@ -52,6 +52,11 @@ button{
     position:absolute;
 }
 
+.ask{
+    background:white;
+    color:#ff1493;
+}
+
 .emoji{
     position:absolute;
     font-size:25px;
@@ -78,6 +83,7 @@ button{
     <h1>เป็นแฟนกับเค้ามุ้ย 💕</h1>
     <button class="yes" onclick="acceptLove()">เป็น ❤️</button>
     <button class="no" id="noBtn">ไม่เป็น 💔</button>
+    <button class="ask" onclick="askYourself()">อยากรู้ก็ถามด้วยตัวเองสิ🫵🏻</button>
 </div>
 
 <!-- หน้า 3 -->
@@ -110,6 +116,11 @@ noBtn.addEventListener("click", function(){
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
 });
+
+// ปุ่มที่สาม
+function askYourself(){
+    alert("อยากรู้ก็ถามเองเลย 😜");
+}
 
 // กดเป็น ❤️
 function acceptLove(){
